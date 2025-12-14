@@ -6,21 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
 node_modules
 dist
 dist-ssr
 coverage
 storybook-static
 *.local
-
 .eslintcache
 .env
-
-#BC openapi doc
 bcoas1.0.yaml
-
-# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 **/.vscode/launch.json
@@ -31,12 +25,14 @@ bcoas1.0.yaml
 *.njsproj
 *.sln
 *.sw?
-
+count.txt
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+todos.json
 *storybook.log
-
-# Ignore BC-extension Files
 *.app
 .alcache
-
-# Sentry Config File
 .env.sentry-build-plugin

@@ -45,7 +45,7 @@ namespace hpeide.Sales {
   @tag("Sales")
   interface ISalesOrder {
     @get
-    @operationId("listSalesOrders")
+    @operationId("SalesOrder")
     @summary("Returns list of Sales Orders")
     list(
       @path

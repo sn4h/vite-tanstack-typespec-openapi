@@ -7,7 +7,7 @@ tags:
 paths:
   /companies({companyId})/salesOrders:
     get:
-      operationId: listSalesOrders
+      operationId: SalesOrder
       summary: Returns list of Sales Orders
       parameters:
         - name: companyId
