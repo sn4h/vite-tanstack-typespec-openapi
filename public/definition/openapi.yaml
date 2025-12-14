@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info:
+  title: Business Central Sales Order API
+  version: 0.0.0
+tags:
+  - name: Sales
+paths:
+  /companies({companyId})/salesOrders:
+    get:
+      operationId: listSalesOrders
+      summary: Returns list of Sales Orders
+      parameters:
+        - name: companyId
+          in: path
+          required: true
+          description: Id for company
+          schema:
+            type: string
+            format: uuid
+        - name: $expand
+          in: query
+          required: false
+          description: Expand related entities
+          schema:
+            type: string
+            enum:
+              - salesOrderLines
+          explode: false
+      responses:
+        '200':
+          description: The request has succeeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesOrderResponse'
+      tags:
+        - Sales
+components:
+  schemas:
+    SalesLine:
+      type: object
+      required:
+        - id
+        - sequence
+        - itemId
+        - description
+        - quantity
+        - unitPrice
+        - amountExcludingTax
+        - totalTaxAmount
+        - amountIncludingTax
+      properties:
+        id:
+          type: string
+        sequence:
+          type: integer
+          format: int32
+        itemId:
+          type: string
+        description:
+          type: string
+        quantity:
+          type: number
+          format: decimal
+        unitPrice:
+          type: number
+          format: decimal
+        amountExcludingTax:
+          type: number
+          format: decimal
+        totalTaxAmount:
+          type: number
+          format: decimal
+        amountIncludingTax:
+          type: number
+          format: decimal
+    SalesOrder:
+      type: object
+      required:
+        - id
+        - number
+        - orderDate
+        - customerName
+        - salesperson
+        - totalAmountExcludingTax
+        - totalTaxAmount
+        - totalAmountIncludingTax
+      properties:
+        id:
+          type: string
+        number:
+          type: string
+        orderDate:
+          type: string
+          format: date
+        customerName:
+          type: string
+        salesperson:
+          type: string
+        totalAmountExcludingTax:
+          type: number
+          format: decimal
+        totalTaxAmount:
+          type: number
+          format: decimal
+        totalAmountIncludingTax:
+          type: number
+          format: decimal
+        salesOrderLines:
+          type: array
+          items:
+            $ref: '#/components/schemas/SalesLine'
+    SalesOrderResponse:
+      type: object
+      required:
+        - '@odata.context'
+        - value
+      properties:
+        '@odata.context':
+          type: string
+        '@odata.count':
+          type: integer
+          format: int32
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/SalesOrder'
+servers:
+  - url: https://api.businesscentral.dynamics.com/v2.0/<tenantId>/<env>/
+    description: Business Central API Server
+    variables: {}
