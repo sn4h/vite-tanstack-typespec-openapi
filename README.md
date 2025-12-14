@@ -72,7 +72,7 @@ MIT
 ## 👤 Author
 
 **Hans Philip Eide**
-- GitHub: [@hpeide](https://github.com/@hpeide)
+- GitHub: [@sn4h](https://github.com/@sn4h)
 - Medium: [@hpeide](https://medium.com/@hpeide)
 - LinkedIn: [@hpeide](https://linkedin.com/in/hpeide)
 
