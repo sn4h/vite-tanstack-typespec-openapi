@@ -14,7 +14,6 @@ export const fetchSalesOrders = async () => {
 
   const client = await getAxiosClient()
   const response = await client.SalesOrder()
-
   return response.data as SalesOrderResponse
 }
 
@@ -33,7 +32,7 @@ function App() {
   const { data } = useSuspenseQuery(salesOrderQueryOptions)
 
   return (
-    <div className="p-4">
+    <main className="p-4">
       <header>Hello, SalesOrders!</header>
       <article>
         <ul>
@@ -42,6 +41,6 @@ function App() {
           ))}
         </ul>
       </article>
-    </div>
+    </main>
   )
 }
