@@ -4,7 +4,7 @@ This repository contains the complete source code for the article series publish
 
 ## 📚 Article Series
 
-- [Part 1: TypeSpec & OpenAPI Generation](link-to-medium-article)
+- [Part 1: TypeSpec & OpenAPI Generation](https://medium.com/@hpeide/api-first-with-typespec-openapi-react-tanstack-and-microsoft-dynamics-365-business-central-part-5b034f1dbfd1)
 - Part 2: React Frontend with TanStack Query *(Coming soon)*
 
 ## 🎯 What This Project Demonstrates
@@ -72,9 +72,9 @@ MIT
 ## 👤 Author
 
 **Hans Philip Eide**
-- GitHub: [@yourusername](https://github.com/@hpeide)
-- Medium: [@yourmediumhandle](https://medium.com/@hpeide)
-- LinkedIn: [Your Name](https://linkedin.com/in/hpeide)
+- GitHub: [@hpeide](https://github.com/@hpeide)
+- Medium: [@hpeide](https://medium.com/@hpeide)
+- LinkedIn: [@hpeide](https://linkedin.com/in/hpeide)
 
 ## 📚 Related Resources
 

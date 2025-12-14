@@ -43,7 +43,7 @@ namespace hpeide.Sales {
 
   @route("/companies({companyId})/salesOrders")
   @tag("Sales")
-  interface SalesOrders {
+  interface ISalesOrder {
     @get
     @operationId("listSalesOrders")
     @summary("Returns list of Sales Orders")
